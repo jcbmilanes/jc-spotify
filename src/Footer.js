@@ -13,7 +13,7 @@ export default function Footer() {
     return (
         <div className="footer">
             <div className="footer__left">
-                <img src="" alt=""/>
+                <img className="footer__albumLogo" src="" alt=""/>
                 <div className="footer__songInfo">
                     <h4>Yeah!</h4>
                     <p>Usher</p>
@@ -23,6 +23,7 @@ export default function Footer() {
                 <ShuffleIcon className="footer__green"/>
                 <SkipPreviousIcon className="footer__icon"/>
                 <PlayCircleOutlineIcon className="footer__icon" fontSize="large"/>
+                <SkipNextIcon className="footer__icon" />
                 <RepeatIcon className="footer__green"/>
             </div>
             <div className="footer__right">
