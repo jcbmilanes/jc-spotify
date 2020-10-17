@@ -1,0 +1,23 @@
+.footer {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0; /* stick at the bottom of the page */
+  height: 65px;
+  width: 98%;
+  background-color: #282828;
+  padding: 20px;
+}
+
+.footer__left {
+  flex: 0.3;
+}
+
+.footer__center {
+  flex: 0.4;
+  padding: 0 100px; /* 0 for top & bottom, 100 for left & right*/
+}
+
+.footer__right {
+  flex: 0.3;
+}

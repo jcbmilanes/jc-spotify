@@ -45,21 +45,28 @@ function App() {
         });
 
       });
+
+      spotify.getUserPlaylists().then((playlists)=>{
+        dispatch({
+          type:"SET_PLAYLISTS",
+          playlists: playlists,
+        });
+      });
+
     }
 
     /*console.log('I HAVE A TOKEN >>>', token);*/
-
   }, []);
 
   // to test if the user and token are being actually stored in the data layer.
-  console.log("user pulled from the data layer >>>", user);
-  console.log("token pulled from the data layer >>>", token);
+  // console.log("user pulled from the data layer >>>", user);
+  // console.log("token pulled from the data layer >>>", token);
 
   return (
     <div className="app">
       {
         token ? (
-          <Player/>
+          <Player spotify={spotify} />
         ) : (
           <Login />
         )
