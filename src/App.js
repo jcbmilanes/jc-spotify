@@ -53,6 +53,13 @@ function App() {
         });
       });
 
+      spotify.getPlaylist('37i9dQZEVXcKu8FOLKUKIQ').then((response) => 
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: response,
+        })  
+      )
+
     }
 
     /*console.log('I HAVE A TOKEN >>>', token);*/
